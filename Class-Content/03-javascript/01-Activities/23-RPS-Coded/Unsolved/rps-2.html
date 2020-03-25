@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rock Paper Scissors Part 2</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Rock Paper Scissors Part 2
-  </title>
-</head>
+  <body>
+    <div id="game"></div>
 
-<body>
+    <script type="text/javascript">
+      if (name === "jonathan") {
+        console.log("your name is jonathan");
+      }
+      var name = "jonathan";
 
-  <div id="game">
+      // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+      var computerChoices = ["r", "p", "s"];
 
-  </div>
+      // This function is run whenever the user presses a key.
+      document.onkeyup = function(event) {
+        // Determines which key was pressed.
+        var userGuess = event.key;
 
-  <script type="text/javascript">
+        // Randomly chooses a choice from the options array. This is the Computer's guess.
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var computerChoices = ["r", "p", "s"];
+        // Alerts the key the user pressed (userGuess).
+        alert("User guess: " + userGuess);
 
-    // This function is run whenever the user presses a key.
-    document.onkeyup = function(event) {
-
-      // Determines which key was pressed.
-      var userGuess = event.key;
-
-      // Randomly chooses a choice from the options array. This is the Computer's guess.
-      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
-      // Alerts the key the user pressed (userGuess).
-      alert("User guess: " + userGuess);
-
-      // Alerts the Computer's guess.
-      alert("Computer guess: " + computerGuess);
-
-    };
-  </script>
-
-</body>
-
+        // Alerts the Computer's guess.
+        alert("Computer guess: " + computerGuess);
+      };
+    </script>
+  </body>
 </html>
